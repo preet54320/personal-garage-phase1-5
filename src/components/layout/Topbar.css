@@ -1,0 +1,86 @@
+.topbar {
+  height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 36px;
+  position: sticky;
+  top: 0;
+  z-index: 15;
+  background: linear-gradient(to bottom, var(--bg) 60%, transparent);
+}
+
+.topbar-user {
+  position: relative;
+}
+
+.topbar-avatar-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid var(--panel-border);
+  background: var(--panel);
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.topbar-avatar-btn img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.topbar-avatar-fallback {
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.topbar-menu {
+  position: absolute;
+  right: 0;
+  top: 48px;
+  width: 220px;
+  padding: 16px;
+}
+
+.topbar-menu-name {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.topbar-menu-email {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 2px;
+  word-break: break-all;
+}
+
+.topbar-menu-signout {
+  width: 100%;
+  margin-top: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 10px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--panel-border);
+  background: transparent;
+  color: var(--danger);
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.topbar-menu-signout:hover {
+  background: rgba(255, 92, 92, 0.1);
+}
+
+@media (max-width: 860px) {
+  .topbar {
+    padding: 0 16px;
+    height: 56px;
+  }
+}
