@@ -1,0 +1,36 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function isOwner(uid) {
+      return isSignedIn() && request.auth.uid == uid;
+    }
+
+    // /users/{uid}
+    match /users/{uid} {
+      allow read, write: if isOwner(uid);
+
+      // /users/{uid}/vehicles/{vehicleId}
+      match /vehicles/{vehicleId} {
+        allow read, write: if isOwner(uid);
+
+        // Every vehicle sub-log collection shares the same rule:
+        // fuelLogs, serviceLogs, expenseLogs, partLogs,
+        // documents, photos, reminders, timeline, notes, tyres
+        match /{subcollection}/{docId} {
+          allow read, write: if isOwner(uid);
+        }
+      }
+    }
+
+    // Deny everything else by default
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
