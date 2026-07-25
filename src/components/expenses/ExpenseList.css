@@ -1,0 +1,60 @@
+.expense-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 18px;
+}
+
+.expense-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.expense-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 4px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.expense-row:last-child {
+  border-bottom: none;
+}
+
+.expense-row__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.expense-row__main {
+  flex: 1;
+  min-width: 0;
+}
+
+.expense-row__desc {
+  font-size: 13.5px;
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.expense-row__meta {
+  font-size: 11.5px;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+.expense-row__amount {
+  font-size: 13.5px;
+  white-space: nowrap;
+}
+
+.expense-row__invoice {
+  font-size: 11.5px;
+  color: var(--accent-2);
+  white-space: nowrap;
+}

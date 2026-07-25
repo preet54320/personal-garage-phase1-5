@@ -1,0 +1,18 @@
+export const SERVICE_ITEMS = [
+  'Engine Oil',
+  'Oil Filter',
+  'Air Filter',
+  'Cabin Filter',
+  'Fuel Filter',
+  'Spark Plugs',
+  'Brake Pads',
+  'Brake Oil',
+  'Coolant',
+  'Transmission Oil',
+  'AC Service',
+  'Wheel Alignment',
+  'Wheel Balancing',
+  'Battery',
+  'Car Wash',
+  'Detailing',
+];

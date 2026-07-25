@@ -1,0 +1,106 @@
+.tyre-card {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.tyre-card__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tyre-card__position {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.tyre-card__replace {
+  font-size: 12px;
+  padding: 5px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--panel-border);
+  background: transparent;
+  color: var(--accent);
+}
+
+.tyre-card__replace:hover {
+  background: var(--accent-soft);
+}
+
+.tyre-card__body {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.tyre-card__gauge-text {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.tyre-card__empty-icon {
+  font-size: 22px;
+  color: var(--text-faint);
+}
+
+.tyre-card__info {
+  flex: 1;
+  min-width: 0;
+}
+
+.tyre-card__brand {
+  font-size: 13.5px;
+  font-weight: 500;
+}
+
+.tyre-card__meta {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 3px;
+}
+
+.tyre-card__toggle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  align-self: flex-start;
+  background: transparent;
+  border: none;
+  color: var(--text-faint);
+  font-size: 11.5px;
+}
+
+.tyre-card__toggle svg {
+  font-size: 10px;
+  transition: transform var(--transition);
+}
+
+.tyre-card__toggle svg.is-open {
+  transform: rotate(180deg);
+}
+
+.tyre-card__history {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-top: 1px solid var(--panel-border);
+  padding-top: 10px;
+}
+
+.tyre-card__history-label {
+  font-size: 10.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-faint);
+  margin-bottom: 4px;
+}
+
+.tyre-card__history-row {
+  font-size: 12px;
+  color: var(--text-muted);
+}

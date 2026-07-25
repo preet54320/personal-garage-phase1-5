@@ -21,7 +21,8 @@ export function useSubcollection(vehicleId, subcollection, options = {}) {
     if (!user || !vehicleId) return;
     setLoading(true);
 
-    const constraints = [orderBy(orderByField, direction)];
+    const constraints = [];
+    if (orderByField) constraints.push(orderBy(orderByField, direction));
     if (limitTo) constraints.push(fbLimit(limitTo));
 
     const q = query(subCol(user.uid, vehicleId, subcollection), ...constraints);

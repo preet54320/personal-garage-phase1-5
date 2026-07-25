@@ -13,10 +13,10 @@ import {
 import './FabMenu.css';
 
 const ACTIONS = [
-  { key: 'fuel', label: 'Fuel', icon: PiGasPumpFill, ready: false },
-  { key: 'expense', label: 'Expense', icon: PiReceiptFill, ready: false },
-  { key: 'service', label: 'Service', icon: PiWrenchFill, ready: false },
-  { key: 'part', label: 'Part changed', icon: PiTireFill, ready: false },
+  { key: 'fuel', label: 'Fuel', icon: PiGasPumpFill, ready: true },
+  { key: 'expense', label: 'Expense', icon: PiReceiptFill, ready: true },
+  { key: 'service', label: 'Service', icon: PiWrenchFill, ready: true },
+  { key: 'part', label: 'Part changed', icon: PiTireFill, ready: true },
   { key: 'document', label: 'Document', icon: PiFileTextFill, ready: false },
   { key: 'photo', label: 'Photo', icon: PiImageFill, ready: false },
   { key: 'reminder', label: 'Reminder', icon: PiBellFill, ready: false },
